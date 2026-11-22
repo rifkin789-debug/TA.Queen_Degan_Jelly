@@ -1,0 +1,1271 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+:root {
+    /* ============================================================
+       PALET WARNA QUEEN DEGAN JELLY:
+       DOMINAN HIJAU SOFT SEGAR (VIBRANT FRESH PALM),
+       AKSEN BIRU LAUT MUNCAR (LOGO AIR KELAPA DINGIN),
+       SENTUHAN HANGAT BATOK KELAPA & CLEAN MINT IVORY
+       ============================================================ */
+
+    /* WARNA UTAMA (DOMINAN HIJAU SOFT SEGAR KELAPA MUDA) */
+    --qdj-primary: #238253;           /* Hijau Kelapa Muda Soft Segar & Menyejukkan */
+    --qdj-primary-hover: #1A6A42;     /* Hijau Daun Teduh saat hover */
+    --qdj-primary-light: #34A068;     /* Hijau Daun Ceria */
+    --qdj-primary-soft: #EDF8F2;      /* Mint Sejuk Permukaan Kartu & Badge */
+    --qdj-primary-border: #C7EADB;    /* Border Halus Hijau Kesegaran */
+
+    /* WARNA AKSEN KHAS LOGO (BIRU LAUT & AIR KELAPA DINGIN) */
+    --qdj-blue: #0284C7;              /* Biru Langit & Air Kelapa Logo Queen Degan */
+    --qdj-blue-hover: #0369A1;        /* Biru Pesisir Muncar saat hover */
+    --qdj-blue-soft: #E0F2FE;         /* Biru Es Dingin Lembut (Badge Kesegaran/Voucher) */
+    --qdj-blue-border: #BAE6FD;       /* Border Biru Segar */
+    --qdj-blue-text: #0369A1;         /* Teks Biru Kontras */
+
+    /* SENTUHAN BATOK KELAPA & AKSEN HANGAT */
+    --qdj-brown-dark: #133827;        /* Soft Deep Emerald (Footer & Heading Sejuk Elegan) */
+    --qdj-brown-primary: #238253;     /* Kompatibilitas tombol -> Hijau Soft Utama */
+    --qdj-brown-hover: #1A6A42;
+    --qdj-brown-batok: #734828;       /* Cokelat Batok Kelapa Alami */
+    --qdj-gold: #C5A059;              /* Vintage Gold / Aksen Emas Artisanal */
+    --qdj-gold-soft: #EFE6D5;         /* Krem Kertas Perkamen / Warm Cream */
+    --qdj-gold-subtle: #F6F3ED;       /* Soft Cream latar kartu */
+
+    /* Alias kompatibilitas (menjaga seluruh kode lama tetap 100% bekerja) */
+    --qdj-green-dark: #238253;        /* Hijau Utama untuk harga & isian buah */
+    --qdj-green-hover: #1A6A42;
+    --qdj-green-light: #34A068;
+    --qdj-mint: #EDF8F2;              /* Soft Fresh Mint */
+    --qdj-mint-soft: #F6FCF8;         /* Subtle Fresh Mint */
+    --qdj-mint-dark: #1A6A42;
+    --qdj-leaf-green: #238253;
+    --qdj-leaf-soft: #EDF8F2;
+    --qdj-leaf-border: #C7EADB;
+
+    /* Latar Belakang & Permukaan */
+    --qdj-bg: #EFF5F1;                /* Soft Botanical Mint Alabaster (Sejuk, Nyaman di Mata & Menghidupkan Kontras Kartu Putih) */
+    --qdj-card: #FFFFFF;              /* Putih bersih permukaan kartu */
+    --qdj-card-soft: #E8F3EC;         /* Hijau lembut permukaan kartu alternatif */
+    --qdj-card-border: #DCE8E0;       /* Border halus kartu */
+    --qdj-border-gold: rgba(197, 160, 89, 0.4);
+
+    /* Indikator Status & Aksen */
+    --qdj-yellow: #D97706;
+    --qdj-yellow-bg: #FEF3C7;
+    --qdj-yellow-text: #92400E;
+    --qdj-red: #DC2626;
+    --qdj-red-bg: #FEE2E2;
+    --qdj-red-text: #991B1B;
+
+    /* Form Input */
+    --qdj-input-bg: #FAFCFB;
+    --qdj-input-border: #D6E6DC;
+
+    /* Tipografi */
+    --qdj-text: #23382D;              /* Dark Forest Moss yang sangat nyaman dibaca */
+    --qdj-text-muted: #5C7769;        /* Sage Slate hangat */
+    --qdj-font-heading: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    --qdj-font: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    overflow-x: hidden;
+    max-width: 100vw;
+}
+
+body {
+    background-color: var(--qdj-bg);
+    color: var(--qdj-text);
+    font-family: var(--qdj-font);
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* TIPOGRAFI HEADING EDITORIAL & ARTISANAL */
+h1, h2, h3, h4, .font-heading {
+    font-family: var(--qdj-font-heading);
+    color: var(--qdj-brown-dark);
+    letter-spacing: -0.01em;
+}
+
+/* PRE-TITLE / KICKER KHAS QUEEN DEGAN JELLY */
+.qdj-kicker {
+    display: inline-block;
+    font-family: var(--qdj-font);
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--qdj-primary);
+    margin-bottom: 0.5rem;
+}
+
+/* PEMBATAS ARTISTIK (ORNAMENTAL DIVIDER) */
+.qdj-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.85rem;
+    margin: 1rem auto 1.5rem;
+    color: var(--qdj-primary-light);
+}
+
+.qdj-divider::before,
+.qdj-divider::after {
+    content: '';
+    display: block;
+    height: 1px;
+    width: 48px;
+    background-color: var(--qdj-card-border);
+}
+
+.qdj-divider span {
+    font-size: 0.8rem;
+    opacity: 0.85;
+}
+
+/* NAVBAR & BRAND */
+.qdj-navbar {
+    background-color: #FFFFFF;
+    border-bottom: 1px solid var(--qdj-card-border);
+    padding: 0.75rem 0;
+    box-shadow: 0 2px 12px rgba(24, 90, 55, 0.04);
+}
+
+.brand-name-text {
+    font-family: var(--qdj-font-heading);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--qdj-brown-dark) !important;
+    letter-spacing: 0.01em;
+}
+
+@media (max-width: 480px) {
+    .brand-name-text {
+        font-size: 1.05rem;
+    }
+}
+
+.qdj-brand-logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--qdj-blue);
+    flex-shrink: 0;
+    box-shadow: 0 2px 8px rgba(2, 132, 199, 0.22);
+}
+
+/* QUICK NAV LINKS (NAVBAR KANAN) */
+.qdj-quick-nav-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    min-width: 44px;
+    padding: 0.4rem 0.75rem;
+    color: var(--qdj-text);
+    text-decoration: none;
+    border-radius: 9999px;
+    font-size: 0.88rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.qdj-quick-nav-link:hover {
+    color: var(--qdj-primary);
+    background-color: var(--qdj-primary-soft);
+}
+
+.qdj-quick-nav-link.active {
+    color: var(--qdj-primary);
+    font-weight: 600;
+    background-color: var(--qdj-primary-soft);
+}
+
+.qdj-quick-nav-link .cart-badge {
+    position: absolute;
+    top: 3px;
+    right: 2px;
+    font-size: 0.65rem;
+    padding: 0.2rem 0.4rem;
+}
+
+/* HAMBURGER BUTTON (☰) */
+.qdj-hamburger-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    min-width: 44px;
+    border-radius: 8px;
+    transition: background 0.2s ease;
+    cursor: pointer;
+}
+
+.qdj-hamburger-btn:hover {
+    background-color: var(--qdj-mint-soft);
+}
+
+/* DRAWER POPUP MENU (☰) */
+.qdj-drawer-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(43, 23, 14, 0.45);
+    z-index: 1040;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.3s;
+}
+
+.qdj-drawer-backdrop.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.qdj-drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 310px;
+    max-width: 86vw;
+    height: 100vh;
+    background-color: #FFFFFF;
+    z-index: 1050;
+    box-shadow: 4px 0 28px rgba(43, 23, 14, 0.15);
+    transform: translateX(-100%);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    display: flex;
+    flex-direction: column;
+}
+
+.qdj-drawer.show {
+    transform: translateX(0);
+}
+
+.qdj-drawer-link {
+    display: block;
+    padding: 0.75rem 1rem;
+    color: var(--qdj-text);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.98rem;
+    border-radius: 10px;
+    position: relative;
+    transition: all 0.2s ease;
+    min-height: 44px;
+}
+
+.qdj-drawer-link:hover {
+    background-color: var(--qdj-primary-soft);
+    color: var(--qdj-primary);
+}
+
+.qdj-drawer-link.active {
+    font-weight: 600;
+    color: var(--qdj-primary);
+    background-color: var(--qdj-primary-soft);
+}
+
+.qdj-drawer-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: 6px;
+    left: 1rem;
+    width: 36px;
+    height: 2px;
+    background-color: var(--qdj-blue);
+    border-radius: 2px;
+}
+
+/* TOMBOL UTAMA (DOMINAN HIJAU KELAPA MUDA SEGAR) */
+.btn-qdj {
+    background-color: var(--qdj-primary);
+    color: #FFFFFF !important;
+    border-radius: 9999px;
+    padding: 0.58rem 1.45rem;
+    font-weight: 600;
+    font-size: 0.92rem;
+    border: 1px solid var(--qdj-primary);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45rem;
+    box-shadow: 0 4px 14px rgba(35, 130, 83, 0.22);
+    transition: all 0.25s ease;
+    text-decoration: none;
+}
+
+.btn-qdj:hover {
+    background-color: var(--qdj-primary-hover);
+    border-color: var(--qdj-primary-hover);
+    color: #FFFFFF !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(35, 130, 83, 0.28);
+}
+
+.btn-qdj-outline {
+    background-color: transparent;
+    color: var(--qdj-primary) !important;
+    border-radius: 9999px;
+    padding: 0.58rem 1.45rem;
+    font-weight: 600;
+    font-size: 0.92rem;
+    border: 1.5px solid var(--qdj-primary);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45rem;
+    transition: all 0.25s ease;
+    text-decoration: none;
+}
+
+.btn-qdj-outline:hover {
+    background-color: var(--qdj-primary-soft);
+    color: var(--qdj-primary-hover) !important;
+    border-color: var(--qdj-primary);
+    transform: translateY(-1px);
+}
+
+/* TOMBOL AKSEN BIRU AIR KELAPA LOGO */
+.btn-qdj-blue {
+    background-color: var(--qdj-blue);
+    color: #FFFFFF !important;
+    border-radius: 9999px;
+    padding: 0.58rem 1.45rem;
+    font-weight: 600;
+    font-size: 0.92rem;
+    border: 1px solid var(--qdj-blue);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45rem;
+    box-shadow: 0 4px 14px rgba(2, 132, 199, 0.22);
+    transition: all 0.25s ease;
+    text-decoration: none;
+}
+
+.btn-qdj-blue:hover {
+    background-color: var(--qdj-blue-hover);
+    border-color: var(--qdj-blue-hover);
+    color: #FFFFFF !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(2, 132, 199, 0.3);
+}
+
+.btn-qdj-blue-outline {
+    background-color: transparent;
+    color: var(--qdj-blue) !important;
+    border-radius: 9999px;
+    padding: 0.58rem 1.45rem;
+    font-weight: 600;
+    font-size: 0.92rem;
+    border: 1.5px solid var(--qdj-blue);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45rem;
+    transition: all 0.25s ease;
+    text-decoration: none;
+}
+
+.btn-qdj-blue-outline:hover {
+    background-color: var(--qdj-blue-soft);
+    color: var(--qdj-blue-hover) !important;
+    border-color: var(--qdj-blue);
+    transform: translateY(-1px);
+}
+
+.btn-qdj-danger {
+    background-color: var(--qdj-red);
+    color: #FFFFFF !important;
+    border-radius: 9999px;
+    padding: 0.45rem 1.15rem;
+    font-weight: 500;
+    font-size: 0.88rem;
+    border: 1px solid var(--qdj-red);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem;
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+.btn-qdj-danger:hover {
+    background-color: #991B1B;
+    border-color: #991B1B;
+    color: #FFFFFF !important;
+}
+
+.btn-qdj-disabled,
+.btn-qdj:disabled {
+    background-color: #EAE6DF !important;
+    border-color: #EAE6DF !important;
+    color: #9C948A !important;
+    cursor: not-allowed;
+    pointer-events: none;
+    box-shadow: none !important;
+    transform: none !important;
+}
+
+/* BADGES KESEGARAN BOTANI & AKSEN BIRU LOGO */
+.badge-qdj-available {
+    background-color: var(--qdj-primary-soft);
+    color: var(--qdj-primary);
+    border: 1px solid var(--qdj-primary-border);
+    border-radius: 9999px;
+    padding: 0.35rem 0.95rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    display: inline-block;
+    letter-spacing: 0.02em;
+    box-shadow: 0 1px 4px rgba(24, 90, 55, 0.08);
+}
+
+.badge-qdj-blue {
+    background-color: var(--qdj-blue-soft);
+    color: var(--qdj-blue-text);
+    border: 1px solid var(--qdj-blue-border);
+    border-radius: 9999px;
+    padding: 0.35rem 0.95rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    display: inline-block;
+    letter-spacing: 0.02em;
+    box-shadow: 0 1px 4px rgba(2, 132, 199, 0.08);
+}
+
+.badge-qdj-out {
+    background-color: var(--qdj-red-bg);
+    color: var(--qdj-red-text);
+    border-radius: 9999px;
+    padding: 0.35rem 0.95rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.badge-qdj-fresh-very {
+    background-color: var(--qdj-primary-soft);
+    color: var(--qdj-primary);
+    border: 1px solid var(--qdj-primary-border);
+    border-radius: 9999px;
+    padding: 0.35rem 0.95rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.badge-qdj-fresh {
+    background-color: var(--qdj-primary-soft);
+    color: var(--qdj-primary);
+    border: 1px solid var(--qdj-primary-border);
+    border-radius: 9999px;
+    padding: 0.35rem 0.95rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.badge-qdj-fresh-warn {
+    background-color: var(--qdj-yellow-bg);
+    color: var(--qdj-yellow-text);
+    border-radius: 9999px;
+    padding: 0.35rem 0.95rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.badge-qdj-expired {
+    background-color: var(--qdj-red-bg);
+    color: var(--qdj-red-text);
+    border-radius: 9999px;
+    padding: 0.35rem 0.95rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.badge-qdj-voucher {
+    background-color: var(--qdj-blue-soft);
+    color: var(--qdj-blue-text);
+    border: 1px solid var(--qdj-blue-border);
+    border-radius: 9999px;
+    padding: 0.28rem 0.8rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+/* CARDS */
+.qdj-card {
+    background-color: #FFFFFF;
+    border: 1px solid var(--qdj-card-border);
+    border-radius: 18px;
+    box-shadow: 0 4px 20px rgba(24, 60, 42, 0.05);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.qdj-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 28px rgba(24, 60, 42, 0.09);
+}
+
+.qdj-card-flat {
+    background-color: #FFFFFF;
+    border: 1px solid var(--qdj-card-border);
+    border-radius: 16px;
+}
+
+.qdj-value-card {
+    background-color: var(--qdj-mint-soft);
+    color: var(--qdj-brown-dark);
+    border: 1px solid var(--qdj-card-border);
+    border-radius: 16px;
+    padding: 1.25rem 1rem;
+    font-weight: 600;
+    text-align: center;
+    font-size: 0.95rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.qdj-value-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--qdj-gold);
+}
+
+/* HERO SECTION EDITORIAL & BLURRED PHOTO BACKGROUND */
+.hero-mint {
+    background: linear-gradient(180deg, #EBF6F0 0%, #F8FAF8 100%);
+    border-bottom: 1px solid var(--qdj-card-border);
+    padding: 4.5rem 1rem 4rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-blurred-bg {
+    position: absolute;
+    top: -6px;
+    left: -6px;
+    right: -6px;
+    bottom: -6px;
+    background-image: url('../images/beranda-hero.jpg');
+    background-size: cover;
+    background-position: center 42%;
+    filter: blur(1.5px) brightness(1.02);
+    transform: scale(1.02);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.hero-blurred-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(248, 250, 248, 0.6) 0%, rgba(248, 250, 248, 0.78) 100%);
+    z-index: 2;
+    pointer-events: none;
+}
+
+.hero-mint .container {
+    position: relative;
+    z-index: 3;
+}
+
+.hero-mint h1 {
+    color: var(--qdj-brown-dark);
+    font-family: var(--qdj-font-heading);
+    font-weight: 700;
+    font-size: 2.9rem;
+    line-height: 1.22;
+    margin-bottom: 0.85rem;
+    letter-spacing: -0.015em;
+}
+
+@media (max-width: 576px) {
+    .hero-mint h1 {
+        font-size: 2.1rem;
+    }
+    .hero-mint {
+        padding: 3.5rem 1rem 3rem;
+    }
+}
+
+.hero-mint p {
+    color: var(--qdj-text-muted);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+/* KOTAK KUTIPAN FILOSOFI */
+.qdj-quote-box {
+    background-color: #FCFAF6;
+    border-left: 3px solid var(--qdj-gold);
+    border-radius: 0 12px 12px 0;
+    padding: 1rem 1.25rem;
+    margin: 1.25rem 0;
+    font-style: italic;
+    color: var(--qdj-brown-dark);
+    font-family: var(--qdj-font-heading);
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+/* BINGKAI FOTO MEWAH */
+.qdj-image-frame {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 2px solid var(--qdj-card-border);
+    box-shadow: 0 10px 30px rgba(43, 23, 14, 0.08);
+}
+
+.qdj-image-frame::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    pointer-events: none;
+}
+
+/* INPUTS & FORMS */
+.qdj-input,
+.form-control,
+.form-select {
+    background-color: var(--qdj-input-bg) !important;
+    border: 1px solid var(--qdj-input-border) !important;
+    border-radius: 12px !important;
+    padding: 0.65rem 1rem !important;
+    color: var(--qdj-text) !important;
+    font-size: 0.95rem;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.qdj-input:focus,
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--qdj-brown-primary) !important;
+    box-shadow: 0 0 0 3px rgba(92, 58, 33, 0.14) !important;
+    outline: none;
+}
+
+/* CHIPS (FILTER / KATALOG) */
+.filter-chip {
+    background-color: #FFFFFF;
+    border: 1.5px solid var(--qdj-card-border);
+    color: var(--qdj-text);
+    border-radius: 9999px;
+    padding: 0.5rem 1.4rem;
+    font-size: 0.92rem;
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.filter-chip:hover {
+    border-color: var(--qdj-brown-primary);
+    color: var(--qdj-brown-primary);
+    background-color: var(--qdj-mint-soft);
+}
+
+.filter-chip.active {
+    background-color: var(--qdj-brown-primary);
+    border-color: var(--qdj-brown-primary);
+    color: #FFFFFF !important;
+    font-weight: 600;
+    box-shadow: 0 3px 12px rgba(92, 58, 33, 0.24);
+}
+
+.fruit-chip {
+    border: 1.5px solid var(--qdj-card-border);
+    background-color: #FFFFFF;
+    color: var(--qdj-text);
+    border-radius: 9999px;
+    padding: 0.55rem 1.25rem;
+    font-size: 0.92rem;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    user-select: none;
+}
+
+.fruit-chip:hover:not(.disabled) {
+    border-color: var(--qdj-leaf-green);
+    background-color: var(--qdj-leaf-soft);
+}
+
+.fruit-chip.selected {
+    background-color: var(--qdj-leaf-soft);
+    border-color: var(--qdj-leaf-green);
+    color: var(--qdj-leaf-green);
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(30, 111, 69, 0.16);
+}
+
+.fruit-chip.disabled {
+    background-color: #F3F0EB !important;
+    border-color: #E6E0D6 !important;
+    color: #9C948A !important;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+/* STEPPER */
+.qdj-stepper {
+    display: inline-flex;
+    align-items: center;
+    background-color: var(--qdj-input-bg);
+    border: 1px solid var(--qdj-input-border);
+    border-radius: 9999px;
+    padding: 0.2rem;
+}
+
+.qdj-stepper-btn {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: none;
+    background-color: #FFFFFF;
+    color: var(--qdj-brown-primary);
+    font-weight: 700;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    transition: all 0.15s;
+}
+
+.qdj-stepper-btn:hover {
+    background-color: var(--qdj-mint);
+}
+
+.qdj-stepper-val {
+    width: 48px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1rem;
+    border: none;
+    background: transparent;
+    color: var(--qdj-text);
+}
+
+/* FRESHNESS PROGRESS BAR */
+.freshness-track {
+    width: 100%;
+    height: 10px;
+    background-color: #EAE5DC;
+    border-radius: 9999px;
+    overflow: hidden;
+    margin: 0.6rem 0;
+}
+
+.freshness-fill {
+    height: 100%;
+    border-radius: 9999px;
+    transition: width 0.4s ease;
+}
+
+.freshness-fill-green {
+    background: linear-gradient(90deg, #34A068 0%, #238253 100%);
+}
+
+.freshness-fill-yellow {
+    background-color: var(--qdj-yellow);
+}
+
+.freshness-fill-red {
+    background-color: var(--qdj-red);
+}
+
+/* FOOTER BOTANICAL EMERALD DENGAN AKSEN BIRU AIR KELAPA */
+.qdj-footer {
+    background-color: var(--qdj-brown-dark);
+    color: #FFFFFF;
+    margin-top: auto;
+    padding: 4rem 0 1.75rem;
+    border-top: 3px solid var(--qdj-blue);
+}
+
+.qdj-footer h3,
+.qdj-footer h4 {
+    font-family: var(--qdj-font-heading);
+    color: #FFFFFF;
+    font-weight: 700;
+    margin-bottom: 1.1rem;
+    letter-spacing: 0.01em;
+}
+
+.qdj-footer a {
+    color: rgba(235, 246, 240, 0.85);
+    text-decoration: none;
+    transition: color 0.15s ease;
+    display: inline-block;
+    margin-bottom: 0.45rem;
+}
+
+.qdj-footer a:hover {
+    color: var(--qdj-blue-soft);
+    text-decoration: underline;
+}
+
+.qdj-footer-wa-link {
+    color: #FFFFFF !important;
+    text-decoration: none;
+    transition: all 0.15s ease;
+}
+
+.qdj-footer-wa-link:hover {
+    color: var(--qdj-blue-soft) !important;
+    text-decoration: underline !important;
+}
+
+.btn-footer-map {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1.25rem;
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: #FFFFFF !important;
+    background-color: transparent;
+    border: 1.5px solid var(--qdj-blue);
+    border-radius: 9999px;
+    text-decoration: none !important;
+    transition: all 0.25s ease;
+    margin-bottom: 0 !important;
+}
+
+.btn-footer-map:hover {
+    background-color: var(--qdj-blue);
+    color: #FFFFFF !important;
+    border-color: var(--qdj-blue);
+    text-decoration: none !important;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(2, 132, 199, 0.35);
+}
+
+.qdj-footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    text-align: center;
+    color: rgba(235, 246, 240, 0.65);
+    font-size: 0.88rem;
+}
+
+/* ADMIN STYLING */
+.admin-sidebar {
+    background-color: var(--qdj-brown-dark);
+    color: #FFFFFF;
+    border-radius: 24px;
+    padding: 1.75rem 1.25rem;
+    min-height: calc(100vh - 4rem);
+    border: 1px solid rgba(2, 132, 199, 0.2);
+}
+
+.admin-sidebar .brand-title {
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 1.2rem;
+    font-family: var(--qdj-font-heading);
+    margin-bottom: 0.2rem;
+}
+
+.admin-sidebar .brand-subtitle {
+    color: var(--qdj-blue-border);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.admin-nav-item {
+    color: rgba(235, 246, 240, 0.85);
+    font-weight: 500;
+    font-size: 0.92rem;
+    padding: 0.75rem 1rem;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+    transition: all 0.15s ease;
+    margin-bottom: 0.3rem;
+}
+
+.admin-nav-item:hover {
+    color: #FFFFFF;
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.admin-nav-item.active {
+    color: #FFFFFF;
+    background-color: rgba(2, 132, 199, 0.2);
+    border-left: 3px solid var(--qdj-blue);
+    font-weight: 600;
+}
+
+.admin-header {
+    background-color: #FFFFFF;
+    border: 1px solid var(--qdj-card-border);
+    border-radius: 18px;
+    padding: 1rem 1.5rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+}
+
+.admin-table thead tr th {
+    background-color: var(--qdj-mint) !important;
+    color: var(--qdj-brown-dark) !important;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border-bottom: none;
+    padding: 0.9rem 1rem;
+}
+
+.admin-table thead tr th:first-child {
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+
+.admin-table thead tr th:last-child {
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.admin-table tbody tr td {
+    padding: 1rem;
+    vertical-align: middle;
+    border-bottom: 1px solid var(--qdj-card-border);
+    font-size: 0.92rem;
+}
+
+/* MIDTRANS SNAP LOOKALIKE */
+.midtrans-panel {
+    background-color: #FFFFFF;
+    border: 1px solid var(--qdj-card-border);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(43, 23, 14, 0.08);
+}
+
+.midtrans-header {
+    background-color: var(--qdj-brown-dark);
+    color: #FFFFFF;
+    padding: 1.25rem 1.5rem;
+}
+
+.midtrans-method-tab {
+    border: 1px solid var(--qdj-card-border);
+    border-radius: 12px;
+    padding: 0.85rem 1rem;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.midtrans-method-tab:hover {
+    border-color: var(--qdj-brown-primary);
+    background-color: var(--qdj-mint-soft);
+}
+
+.midtrans-method-tab.active {
+    border-color: var(--qdj-brown-primary);
+    background-color: var(--qdj-mint-soft);
+    box-shadow: 0 0 0 2px var(--qdj-brown-primary);
+}
+
+/* TOGGLE SWITCH */
+.form-check-input:checked {
+    background-color: var(--qdj-brown-primary);
+    border-color: var(--qdj-brown-primary);
+}
+
+/* ============================================================
+   FITUR BERANDA TAMBAHAN (EDITORIAL & ARTISANAL CHOCOLATE MONGGO)
+   ============================================================ */
+.qdj-step-card {
+    background-color: #FFFFFF;
+    border: 1px solid var(--qdj-card-border);
+    border-radius: 18px;
+    padding: 1.75rem 1.5rem;
+    height: 100%;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    position: relative;
+}
+
+.qdj-step-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 28px rgba(43, 23, 14, 0.08);
+    border-color: var(--qdj-gold);
+}
+
+.qdj-step-num {
+    font-family: var(--qdj-font-heading);
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--qdj-gold);
+    line-height: 1;
+    margin-bottom: 0.75rem;
+}
+
+.qdj-trust-pill {
+    background-color: #FFFFFF;
+    border: 1px solid var(--qdj-card-border);
+    border-radius: 9999px;
+    padding: 0.6rem 1.25rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--qdj-brown-dark);
+    box-shadow: 0 2px 8px rgba(43, 23, 14, 0.04);
+    transition: all 0.2s ease;
+}
+
+.qdj-trust-pill:hover {
+    border-color: var(--qdj-leaf-border);
+    background-color: var(--qdj-leaf-soft);
+    color: var(--qdj-leaf-green);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(30, 111, 69, 0.1);
+}
+
+.qdj-testimonial-card {
+    background-color: #FFFFFF;
+    border: 1px solid var(--qdj-card-border);
+    border-radius: 18px;
+    padding: 1.75rem;
+    height: 100%;
+    box-shadow: 0 4px 18px rgba(43, 23, 14, 0.04);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.25s ease;
+}
+
+.qdj-testimonial-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(43, 23, 14, 0.08);
+}
+
+.qdj-stars {
+    color: var(--qdj-gold);
+    letter-spacing: 0.1em;
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+}
+
+/* FAQ ACCORDION */
+.qdj-accordion .accordion-item {
+    background-color: #FFFFFF;
+    border: 1px solid var(--qdj-card-border);
+    border-radius: 14px !important;
+    margin-bottom: 0.85rem;
+    overflow: hidden;
+}
+
+.qdj-accordion .accordion-button {
+    font-family: var(--qdj-font-heading);
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: var(--qdj-brown-dark);
+    background-color: #FFFFFF;
+    padding: 1.15rem 1.25rem;
+    box-shadow: none;
+}
+
+.qdj-accordion .accordion-button:not(.collapsed) {
+    color: var(--qdj-brown-primary);
+    background-color: var(--qdj-mint-soft);
+    border-bottom: 1px solid var(--qdj-card-border);
+}
+
+.qdj-accordion .accordion-button:focus {
+    box-shadow: 0 0 0 3px rgba(92, 58, 33, 0.12);
+}
+
+.qdj-accordion .accordion-body {
+    color: var(--qdj-text-muted);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    padding: 1.25rem;
+}
+
+/* CTA BANNER KELUARGA / ACARA */
+.qdj-cta-banner {
+    background: linear-gradient(135deg, var(--qdj-brown-dark) 0%, #3D2214 100%);
+    color: #FFFFFF;
+    border-radius: 24px;
+    padding: 3rem 2rem;
+    border: 1.5px solid var(--qdj-gold);
+    box-shadow: 0 12px 36px rgba(43, 23, 14, 0.2);
+}
+
+/* LIHAT PESANAN & STATUS STYLES */
+.qdj-status-tabs {
+    display: flex;
+    gap: 0.5rem;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+}
+.qdj-status-tab {
+    white-space: nowrap;
+    padding: 0.55rem 1.15rem;
+    border-radius: 9999px;
+    font-size: 0.86rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--qdj-text-muted);
+    background: #FFFFFF;
+    border: 1px solid var(--qdj-border);
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+}
+.qdj-status-tab:hover {
+    color: var(--qdj-brown-dark);
+    border-color: var(--qdj-brown-primary);
+    background: #FAF7F2;
+}
+.qdj-status-tab.active {
+    background: var(--qdj-brown-primary);
+    color: #FFFFFF;
+    border-color: var(--qdj-brown-primary);
+    box-shadow: 0 4px 12px rgba(92, 58, 33, 0.2);
+}
+.qdj-status-tab .tab-count {
+    font-size: 0.75rem;
+    padding: 0.12rem 0.55rem;
+    border-radius: 9999px;
+    background: rgba(0, 0, 0, 0.08);
+}
+.qdj-status-tab.active .tab-count {
+    background: rgba(255, 255, 255, 0.28);
+    color: #FFFFFF;
+}
+
+/* Status Specific Badges */
+.badge-status-accepted {
+    background-color: #EFF6FF !important;
+    color: #1D4ED8 !important;
+    border: 1px solid rgba(29, 78, 216, 0.25) !important;
+    font-weight: 600;
+    border-radius: 9999px;
+    padding: 0.35rem 0.95rem;
+    font-size: 0.8rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+.badge-status-preparing {
+    background-color: #FFFBEB !important;
+    color: #B45309 !important;
+    border: 1px solid rgba(180, 83, 9, 0.3) !important;
+    font-weight: 600;
+    border-radius: 9999px;
+    padding: 0.35rem 0.95rem;
+    font-size: 0.8rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+.badge-status-shipping {
+    background-color: #F0FDF4 !important;
+    color: #15803D !important;
+    border: 1px solid rgba(21, 128, 61, 0.3) !important;
+    font-weight: 600;
+    border-radius: 9999px;
+    padding: 0.35rem 0.95rem;
+    font-size: 0.8rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+.badge-status-delivered {
+    background-color: #ECFDF5 !important;
+    color: #047857 !important;
+    border: 1px solid rgba(4, 120, 87, 0.3) !important;
+    font-weight: 600;
+    border-radius: 9999px;
+    padding: 0.35rem 0.95rem;
+    font-size: 0.8rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+.badge-status-cancelled {
+    background-color: #FEF2F2 !important;
+    color: #B91C1C !important;
+    border: 1px solid rgba(185, 28, 28, 0.25) !important;
+    font-weight: 600;
+    border-radius: 9999px;
+    padding: 0.35rem 0.95rem;
+    font-size: 0.8rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+.badge-status-pending {
+    background-color: #FFF7ED !important;
+    color: #C2410C !important;
+    border: 1px solid rgba(194, 65, 12, 0.25) !important;
+    font-weight: 600;
+    border-radius: 9999px;
+    padding: 0.35rem 0.95rem;
+    font-size: 0.8rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.order-product-thumb {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 1px solid var(--qdj-border);
+    flex-shrink: 0;
+}
